@@ -17,9 +17,9 @@ weatherForm.addEventListener('submit', (e) => {
       locationName.textContent = name;
       if (main) {
         const { temp, feels_like, pressure } = main;
-        weatherDetails.textContent = ` the tempreature is : ${
-          feels_like - (272.15).toFixed(2)
-        }`;
+        weatherDetails.textContent = ` the tempreature is : ${(
+          feels_like - 272.15
+        ).toFixed(2)}`;
       }
     });
   });
