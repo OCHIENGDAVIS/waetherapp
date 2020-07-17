@@ -6,6 +6,7 @@ const geocode = require('./utils');
 
 const app = express();
 const key = 'b4efc8734924f6036a98206864c071f7';
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, '../public')));
@@ -51,6 +52,6 @@ app.get('*', (req, res) => {
   res.render('404', { message: 'OOPS! 404 Page Not Found' });
 });
 
-app.listen(3000, () => {
-  console.log('Running on port 3000');
+app.listen(port, () => {
+  console.log(`Running on port ${3000}`);
 });
