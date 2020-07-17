@@ -12,10 +12,26 @@
     {{>header}}
     <div class="container container-fluid">
         <h1>{{title}}</h1>
-        <p>Created by : {{name}}</p>
+        <div>
+            <form action="" method="get" id="addressForm">
+                <input type="text" name="address" id="address">
+                <input type="submit" value="search" placeholder="locations">
+            </form>
+        </div>
+        <div>
+            <h5 id="message">
+
+            </h5>
+            <p id="locationName">
+
+            </p>
+            <hr>
+            <p id="weatherDetails"></p>
+        </div>
 
     </div>
     {{>js}}
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

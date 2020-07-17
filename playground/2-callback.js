@@ -1,3 +1,4 @@
+const lnk = ``;
 setImmediate(() => {
   console.log('Two seconds has passed');
 }, 2000);
