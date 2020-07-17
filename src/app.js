@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, '../templates/views'));
 hbs.registerPartials(path.join(__dirname, '../templates/partials'));
 
 app.get('', (req, res) => {
-  res.render('index', { title: 'Index Page', name: 'Ochieng' });
+  res.render('index', { title: 'Weather App', name: 'Ochieng' });
 });
 
 app.get('/about', (req, res) => {
@@ -38,12 +38,6 @@ app.get('/weather', (req, res) => {
       const { message, name } = err;
       res.json({ message, name });
     });
-});
-app.get('/products', (req, res) => {
-  if (!req.query.q) {
-    return res.json({ message: 'You must provide a search term' });
-  }
-  res.json({ products: {} });
 });
 app.get('/help/*', (req, res) => {
   res.render('404', { message: 'Help article not there' });

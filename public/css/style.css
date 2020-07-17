@@ -4,3 +4,11 @@ h1 {
 img {
   width: 250px;
 }
+.title {
+  color: #ada6a6;
+  margin-bottom: 3rem;
+}
+input[type='text'] {
+  width: 50%;
+  margin-bottom: 3rem;
+}
